@@ -200,7 +200,7 @@ namespace Microsoft.Graph.ODataTemplateWriter.CodeHelpers.CSharp
 
         public static string GetNamespaceName(this OdcmNamespace namespaceObject)
         {
-            return Inflector.Inflector.Pascalize(namespaceObject.Name);
+            return Inflector.Inflector.Titleize(namespaceObject.Name).Replace(" ", "");
         }
 
         public static string GetToLowerFirstCharName(this OdcmProperty property)
